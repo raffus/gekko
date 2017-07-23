@@ -112,21 +112,20 @@ This a basic strategy example that buys and sells BTC/USDT when it hits a specif
     // update or not.
     strat.check = function() {
         // buy when it hits buy price
-        if(candle.close <= this.buyPrice)
-        {
+        if(candle.close <= this.buyPrice) {
             this.advice("long");
             // do some output
-            console.log("buying BTC @", candle.close);
+            console.log("buying BTC @", candle.close);
             return;
-        }
+        }
         
-        if(candle.close >= this.sellPrice)
-        {
-            this.advice("long");
+        // sell when it hits sell price
+        if(candle.close >= this.sellPrice) {
+            this.advice("short");
             // do some output
-            console.log("selling BTC @", candle.close);
-            console.log("Profit:", (candle.close-this.buyPrice));
-            return;
+            console.log("selling BTC @", candle.close);
+            console.log("Profit:", (candle.close-this.buyPrice));
+            return;
         }
     }
 
