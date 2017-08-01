@@ -4,7 +4,7 @@ When writing [your own trading methods](https://gekko.wizb.it/docs/strategies/cr
 
 ## Example
 
-If you want to use the MACD indicator from TA-lib, you need to register it in your trading method like so:
+If you want to use the MACD indicator from TA-lib, you need to register it in your strategy like so:
 
     method.init = function() {
       var customMACDSettings = {
@@ -13,7 +13,7 @@ If you want to use the MACD indicator from TA-lib, you need to register it in yo
         optInSignalPeriod: 9
       }
 
-      // add the indicator to the method
+      // add the indicator to the strategy
       this.addTalibIndicator('mymacd', 'macd', customMACDSettings);
     }
 
