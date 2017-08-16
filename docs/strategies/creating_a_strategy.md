@@ -174,7 +174,7 @@ In your check or update method:
 
     var result = this.indicators.mytalibmacd.result;
 
-See the [TA-lib indicators](https://github.com/askmike/gekko/blob/stable/docs/trading_bot/talib_indicators.md) document for a list of all suppported TA-lib indicators and there required parameters.
+See the [TA-lib indicators](./docs/strategies/talib_indicators.md) document for a list of all suppported TA-lib indicators and there required parameters.
 
 ### Configurables
 
